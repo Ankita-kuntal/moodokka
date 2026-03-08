@@ -12,7 +12,7 @@ const BASE_URL = import.meta.env?.VITE_API_URL || process.env?.REACT_APP_API_URL
 const Login = () => {
   const navigate = useNavigate();
   const { login } = useAuth();
-  
+
   const [isSignup, setIsSignup] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -25,8 +25,8 @@ const Login = () => {
     setLoading(true);
 
     // Using the BASE_URL from env here
-    const endpoint = isSignup 
-      ? `${BASE_URL}/api/auth/register` 
+    const endpoint = isSignup
+      ? `${BASE_URL}/api/auth/register`
       : `${BASE_URL}/api/auth/login`;
 
     try {
@@ -48,8 +48,8 @@ const Login = () => {
       const googleEmail = result.user.email;
 
       // Also updated Google login to use BASE_URL
-      const response = await axios.post(`${BASE_URL}/api/auth/google`, { 
-        email: googleEmail 
+      const response = await axios.post(`${BASE_URL}/api/auth/google`, {
+        email: googleEmail
       });
 
       login(response.data.token, response.data._id);
@@ -91,10 +91,10 @@ const Login = () => {
         </form>
 
         <button onClick={handleGoogleLogin} className={styles.googleBtn} type="button">
-          <img 
-            src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" 
-            alt="Google" 
-            width="20" 
+          <img
+            src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+            alt="Google"
+            width="20"
           />
           {isSignup ? 'Sign up with Google' : 'Sign in with Google'}
         </button>
@@ -104,7 +104,7 @@ const Login = () => {
             {isSignup ? 'Already have an account? ' : 'New here? '}
             <span
               onClick={() => setIsSignup(!isSignup)}
-              style={{ cursor: 'pointer', color: '#ff9f1c', fontWeight: 'bold' }}
+              className={styles.link}
             >
               {isSignup ? 'Login' : 'Create Account'}
             </span>

@@ -330,3 +330,31 @@
     height: 18px;
   }
 }
+
+.analyticsBtnWrapper {
+  position: absolute;
+  top: 40px;
+  right: 54px;
+  z-index: 2;
+}
+
+.analyticsBtn {
+  display: inline-block;
+  padding: 8px 26px;
+  background: #e3f0fc;
+  color: #71bff4;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  border: 2px solid #aed7f4;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(183, 217, 247, 0.14);
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  cursor: pointer;
+  text-align: center;
+}
+.analyticsBtn:hover {
+  background: #bfdff7;
+  color: #71bff4;
+  border-color: #71bff4;
+}

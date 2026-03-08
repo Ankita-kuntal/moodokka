@@ -43,31 +43,24 @@
 
 /* NEW: Analytics Button Style */
 .analyticsBtn {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  border: 2px solid #333;
-  border-radius: 12px;
-  padding: 12px 24px;
-  font-family: 'Comic Sans MS', 'Marker Felt', cursive;
-  font-size: 1rem;
-  font-weight: bold;
+  display: inline-block;
+  padding: 8px 26px;
+  background: #e3f0fc;
+  color: #71bff4;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  border: 2px solid #aed7f4;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(183, 217, 247, 0.14);
+  transition: background 0.2s, color 0.2s, border 0.2s;
   cursor: pointer;
-  box-shadow: 3px 3px 0px #333;
-  transition: all 0.15s;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  white-space: nowrap;
+  text-align: center;
 }
-
 .analyticsBtn:hover {
-  transform: translateY(-2px);
-  box-shadow: 4px 4px 0px #333;
-}
-
-.analyticsBtn:active {
-  transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0px #333;
+  background: #bfdff7;
+  color: #71bff4;
+  border-color: #71bff4;
 }
 
 /* SEARCH BAR SECTION */

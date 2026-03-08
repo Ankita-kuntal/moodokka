@@ -26,8 +26,8 @@ const AllEntries = () => {
 
     // 1. Text Search (Title or Mood)
     if (filter) {
-      result = result.filter(d => 
-        d.title.toLowerCase().includes(filter.toLowerCase()) || 
+      result = result.filter(d =>
+        d.title.toLowerCase().includes(filter.toLowerCase()) ||
         d.mood.toLowerCase().includes(filter.toLowerCase())
       );
     }
@@ -48,22 +48,25 @@ const AllEntries = () => {
           ← Home
         </button>
         <h1>All Memories 📚</h1>
-        <button onClick={() => navigate('/analytics')} className={styles.analyticsBtn}>
-          📊 Analytics
+        <button
+          onClick={() => navigate('/analytics')}
+          className={styles.analyticsBtn}
+        >
+          Analytics →
         </button>
       </div>
 
       {/* SEARCH BAR */}
       <div className={styles.searchBar}>
-        <input 
-          type="text" 
-          placeholder="Search by mood or title..." 
+        <input
+          type="text"
+          placeholder="Search by mood or title..."
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
           className={styles.searchInput}
         />
-        <input 
-          type="date" 
+        <input
+          type="date"
           value={searchDate}
           onChange={(e) => setSearchDate(e.target.value)}
           className={styles.dateInput}
