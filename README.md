@@ -4,6 +4,15 @@ Moodokka is an aesthetic, privacy-focused mood diary application designed to pro
 
 ---
 
+<p align="center">
+  <img src="./screenshots/dashboard.png" width="48%" />
+  <img src="./screenshots/moodwheel.png" width="48%" />
+</p>
+
+<p align="center">
+  <img src="/client/public/images/moodokka.gif" width="700" />
+</p>
+
 ## 🎨 Key Features
 
 - **Interactive Mood Wheel**  
